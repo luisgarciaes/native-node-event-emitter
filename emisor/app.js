@@ -1,5 +1,5 @@
-var Emitter = require('./emitter');
-
+//var Emitter = require('./emitter');
+var Emitter = require('events'); // it changed from a Function:anonymous to Function:emit
 var emtr = new Emitter();
 
 emtr.on('greet', () => {
@@ -22,3 +22,4 @@ console.log('Hell!'); //prints 'Hell!' to the console
 emtr.emit('greet'); //prints both greetings to the console
 
 console.log(emtr.emit) // anon function
+
